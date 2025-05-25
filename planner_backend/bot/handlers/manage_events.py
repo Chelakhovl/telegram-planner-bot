@@ -145,6 +145,7 @@ async def save_new_value(message: Message, state: FSMContext):
     finally:
         await state.clear()
 
+
 @router.message(Command("clear"))
 async def clear_all_events(message: Message):
     user = await get_or_create_user(message.from_user.id)

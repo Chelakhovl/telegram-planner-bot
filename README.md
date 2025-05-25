@@ -26,7 +26,7 @@ Telegram-бот для планування дня з нагадуваннями
 
 ### 1. Клонування репозиторію
 ```bash
-git clone https://github.com/your-username/planner-bot.git
+git clone https://github.com/Chelakhovl/telegram-planner-bot.git
 cd planner-bot
 2. Встановлення залежностей
 python -m venv venv
