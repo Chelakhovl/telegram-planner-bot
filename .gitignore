@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# PostgreSQL dumps
+*.pgsql
+*.sql
+
+# Migrations (опціонально, якщо їх генерує кожен локально)
+**/migrations/
+!*/migrations/__init__.py
+
+# VSCode, PyCharm, IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Byte-compiled / cache
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Logs
+*.log
+*.out
+*.err
+
+# pipenv / poetry
+Pipfile.lock
+poetry.lock
+
+# Jupyter / IPython
+.ipynb_checkpoints
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Docker (якщо буде використовуватись)
+*.pid
+docker-compose.override.yml
+
+# mypy / flake8 / black / pylintrc
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
