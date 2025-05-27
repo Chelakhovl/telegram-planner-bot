@@ -24,36 +24,82 @@ Telegram-бот для планування дня з нагадуваннями
 
 ## 📅 Інсталяція
 
-### 1. Клонування репозиторію
+## 📦 Встановлення та запуск
+
+### 1. 🧬 Клонування репозиторію
 ```bash
 git clone https://github.com/Chelakhovl/telegram-planner-bot.git
-cd planner-bot
-2. Встановлення залежностей
+cd planner_backend
+```
+
+---
+
+### 2. 🔧 Встановлення залежностей
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-3. Налаштування .env
-Створіть файл .env в корені проєкту:
+```
 
+---
+
+### 3. ⚙️ Налаштування `.env`
+
+Створи файл `.env` у корені проєкту та додай:
+```env
 SECRET_KEY=your_django_secret
 DEBUG=True
+
 BOT_TOKEN=your_telegram_bot_token
+
 DB_NAME=your_db_name
 DB_USER=your_db_user
-DB_PASSWORD=our_db_password
-DB_HOST=our_db_host
-DB_PORT=our_db_port
-🚀 Запуск
+DB_PASSWORD=your_db_password
+DB_HOST=your_db_host
+DB_PORT=your_db_port
+```
 
-Django
+---
+
+## 🚀 Запуск проєкту
+
+### 🛠️ Django (бекенд)
+```bash
 python manage.py migrate
-python manage.py createsuperuser
+python manage.py createsuperuser   # тільки один раз
 python manage.py runserver
-Celery + Beat (в окремих терміналах)
+```
+
+---
+
+### ⏳ Celery + Beat (у **двох** окремих терміналах)
+
+**Celery Worker:**
+```bash
 celery -A planner_backend worker --loglevel=info
+```
+
+**Celery Beat:**
+```bash
 celery -A planner_backend beat --loglevel=info
-Redis
+```
+
+---
+
+### 🧠 Redis (у ще одному терміналі)
+```bash
 redis-server
+```
+
+---
+
+### 🤖 Telegram-бот (Aiogram)
+```bash
+cd bot
+python main.py
+```
+
+> Успішний запуск → `MAIN STARTED ✅`
 🔎 Структура проєкту
 
 planner_backend/

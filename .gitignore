@@ -26,10 +26,6 @@ local_settings.py
 *.pgsql
 *.sql
 
-# Migrations (опціонально, якщо їх генерує кожен локально)
-**/migrations/
-!*/migrations/__init__.py
-
 # VSCode, PyCharm, IDEs
 .vscode/
 .idea/
